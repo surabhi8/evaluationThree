@@ -1,0 +1,17 @@
+.Shelf-wrapper{
+   display:flex;
+   flex-direction:row;
+   background-color:darkorange;
+   width:1400px;
+   height:40%;
+   align-items: flex-start;
+   border:1px solid black;
+   margin-top:100px;
+   margin-left:0px;
+}
+
+.Shelf-author{
+  font-family:Arial, Helvetica, sans-serif;
+  font-color:white;
+  font-size:20px;
+}

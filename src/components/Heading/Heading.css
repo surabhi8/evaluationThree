@@ -4,11 +4,13 @@
   height:50px;
   width:300px;
   display:flex;
+
 } 
 .Heading-child-wrapper{
   display:flex;
   justify-content: space-between;
   color:white;
+  text-decoration: underline;
 }
 .Heading-big{
   font-size:35px;

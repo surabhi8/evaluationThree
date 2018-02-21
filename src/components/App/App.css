@@ -2,3 +2,9 @@
   display: flex;
   flex-direction:row; 
 }
+
+.App-child-wrapper{
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
