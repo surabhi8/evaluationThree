@@ -1,10 +1,11 @@
 import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import './App.css';
 import SideBar from '../SideBar/SideBar';
 import Heading from '../Heading/Heading';
 import Shelf from '../Shelf/Shelf';
-import { connect } from 'react-redux';
+
 import { insertbook } from '../../redux/actions';
 import EmptyBookComponent from '../EmptyBookComponent/EmptyBookComponent';
 
@@ -18,7 +19,6 @@ class App extends Component {
           author: book.author,
           name: book.title,
           bookId: book.bookId,
-          Likes: book.Likes,
           rating: book.rating,
         };
         this.props.insertBook(payload);
