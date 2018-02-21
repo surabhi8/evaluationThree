@@ -10,7 +10,7 @@ justify-content: space-between;
 .SideBar-value{
   padding:10px;
   display: flex;
-  justify-content: flex-start
+  justify-content: flex-start;
 }
 
 .SideBar-icons{

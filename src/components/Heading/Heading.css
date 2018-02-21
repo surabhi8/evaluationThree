@@ -1,0 +1,23 @@
+.Heading-wrapper{
+  color:brown;
+  background:brown;
+  height:50px;
+  width:300px;
+  display:flex;
+} 
+.Heading-child-wrapper{
+  display:flex;
+  justify-content: space-between;
+  color:white;
+}
+.Heading-big{
+  font-size:35px;
+}
+.Heading-first{
+  padding:12px;
+  font-size:25px;
+}
+.Heading-last{
+  padding:12px;
+  font-size: 25px;
+}
