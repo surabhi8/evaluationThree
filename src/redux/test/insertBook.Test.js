@@ -4,12 +4,17 @@ const savedBookArray = [
 ];
 describe('Testing the reducer function', () => {
   test('AllbooksArray function should return promise', () => {
-    payload = {
+    const payload = {
+    };
+    expect(insertBook(payload)).toEqual(savedBookArray);
+  });
+  test('AllbooksArray function should return promise', () => {
+    const payload = {
       author: 'Hello',
       name: 'dwarf',
       rating: '4.4',
       bookId: '10',
     };
-    expect(insertBook(payload)).toBe(true);
+    expect(insertBook(payload).length === 1).toBe(true);
   });
 });
