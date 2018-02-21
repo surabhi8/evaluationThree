@@ -9,31 +9,19 @@ import { insertbook } from '../../redux/actions';
 import EmptyBookComponent from '../EmptyBookComponent/EmptyBookComponent';
 
 class App extends Component {
-  // componentDidMount() {
-  //   fetch('/retieve', {
-  //     method: 'GET',
-  //   }).then(response => response.json()).then((responseObj) => {
-  //     responseObj.notesArray.forEach((note) => {
-  //       const payload = {
-  //         currentTitle: note.noteTitle,
-  //         currentBody: note.noteBody,
-  //         currentKey: note.noteKey,
-  //       };
-  //       this.props.saveNoteFromDataBase(payload);
-  //     });
-  //   });
-  // }
   onSync =() => {
-    fetch('/retieve', {
+    fetch('/retrieve', {
       method: 'GET',
     }).then(response => response.json()).then((responseObj) => {
-      responseObj.notesArray.forEach((note) => {
+      responseObj.booksArray.forEach((book) => {
         const payload = {
-          currentTitle: note.noteTitle,
-          currentBody: note.noteBody,
-          currentKey: note.noteKey,
+          author: book.author,
+          name: book.title,
+          bookId: book.bookId,
+          Likes: book.Likes,
+          rating: book.rating,
         };
-        this.props.saveNoteFromDataBase(payload);
+        this.props.insertBook(payload);
       });
     });
   }
@@ -68,6 +56,7 @@ App.propTypes = {
     title: PropTypes.string.isRequired,
     likes: PropTypes.string.isRequired,
   })).isRequired,
+  insertBook: PropTypes.string.isRequired,
 };
 
 const mapDispatchToProp = dispatch =>

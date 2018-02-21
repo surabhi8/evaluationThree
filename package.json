@@ -9,7 +9,8 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "jest": "^22.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,5 +24,5 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0"
   },
-  "proxy":"http://localhost:8080"
+  "proxy": "http://localhost:8080"
 }

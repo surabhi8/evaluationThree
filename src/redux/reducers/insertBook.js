@@ -8,9 +8,10 @@ const insertBook = (state = initialState, action) => {
         savedBooks: [...state.savedBooks,
           {
             author: action.payload.author,
-            title: action.payload.title,
+            name: action.payload.name,
             bookId: action.payload.bookId,
-            likes: action.payload.likes,
+            Likes: action.payload.Likes,
+            rating: action.payload.rating,
           },
         ],
       };
