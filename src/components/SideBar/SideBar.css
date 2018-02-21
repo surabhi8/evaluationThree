@@ -1,0 +1,28 @@
+.SideBar-wrapper{
+display:flex;
+flex-direction:column;
+background:darkgrey;
+width:50px;
+height:100vh;
+justify-content: space-between;
+}
+
+.SideBar-value{
+  padding:10px;
+  display: flex;
+  justify-content: flex-start
+}
+
+.SideBar-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+.SideBar-settings{
+  display: flex;
+  justify-content: flex-end
+}
+.SideBar-refresh{
+  display:flex;
+  justify-content: flex-start
+}

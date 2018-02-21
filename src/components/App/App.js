@@ -1,22 +1,17 @@
 
 import React, { Component } from 'react';
 import './App.css';
+import SideBar from '../SideBar/SideBar';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
   render() {
-    return (<div />);
+    return (
+      <div className="App-wrapper">
+        <SideBar value="Bs" settingUrl="" refreshUrl="" />
+      </div>
+    );
   }
 }
+
 export default App;
-App.propTypes = {
-
-};
-App.defaultProps = {
-
-};
 
