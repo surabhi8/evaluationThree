@@ -10,20 +10,26 @@ import { insertbook } from '../../redux/actions';
 import EmptyBookComponent from '../EmptyBookComponent/EmptyBookComponent';
 
 class App extends Component {
+  componentDidMount=() => {
+
+  }
   onSync =() => {
     fetch('/retrieve', {
       method: 'GET',
-    }).then(response => response.json()).then((responseObj) => {
-      responseObj.booksArray.forEach((book) => {
-        const payload = {
-          author: book.author,
-          name: book.title,
-          bookId: book.bookId,
-          rating: book.rating,
-        };
-        this.props.insertBook(payload);
+    })
+      .then(response => response.json())
+      .then((responseObj) => {
+        responseObj.booksArray.forEach((book) => {
+          const payload = {
+            author: book.author,
+            name: book.title,
+            bookId: book.bookId,
+            rating: book.rating,
+            Likes: 0,
+          };
+          this.props.insertBook(payload);
+        });
       });
-    });
   }
   render() {
     if (typeof this.props.savedBooks !== 'undefined' && this.props.savedBooks.length > 0) {

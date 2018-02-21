@@ -14,6 +14,7 @@ describe('Testing the reducer function', () => {
       name: 'dwarf',
       rating: '4.4',
       bookId: '10',
+      likes: 0,
     };
     expect(insertBook(payload).length === 1).toBe(true);
   });

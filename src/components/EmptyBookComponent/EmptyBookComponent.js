@@ -6,13 +6,14 @@ class EmptyBookComponent extends Component {
   render() {
     return (
       <div className="EmptyBookComponent-wrapper">
-
+        OOPs! No books found!
+        Import them now!
         <a
           onClick={() => {
           this.props.saveBooks();
            }}
         >
-          <img src="" alt="refersh" />
+          <img src="./refresh.jpg" alt="refersh" />
         </a>
       </div>
     );
